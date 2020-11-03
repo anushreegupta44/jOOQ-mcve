@@ -1,0 +1,16 @@
+spring:
+  jooq:
+    sql-dialect: h2
+  datasource:
+    url: jdbc:h2:~/mcve
+    username: sa
+    password:
+  flyway:
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    baseline-on-migrate: true
+    baseline-version: 0
+  h2:
+    console:
+      enabled: true
